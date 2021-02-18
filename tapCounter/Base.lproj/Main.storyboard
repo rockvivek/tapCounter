@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="tapCounter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Counter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7L-FR-sHP">
+                                <rect key="frame" x="155" y="58" width="104" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYR-7F-t8Q">
+                                <rect key="frame" x="10" y="58" width="75" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SqW-Oq-6XF"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRj-CC-QXc">
+                                <rect key="frame" x="171.5" y="380" width="71.5" height="146"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="122"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgl-iU-Z0A">
+                                <rect key="frame" x="187.5" y="558" width="39" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Tap"/>
+                                <connections>
+                                    <action selector="tapButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XhX-Vc-WCX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="b7L-FR-sHP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4cZ-Sc-bQa"/>
+                            <constraint firstItem="rRj-CC-QXc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="CxH-ke-WFo"/>
+                            <constraint firstItem="LYR-7F-t8Q" firstAttribute="height" secondItem="b7L-FR-sHP" secondAttribute="height" id="FpM-Bx-gFx"/>
+                            <constraint firstItem="b7L-FR-sHP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="14" id="KtX-53-MhN"/>
+                            <constraint firstItem="LYR-7F-t8Q" firstAttribute="top" secondItem="b7L-FR-sHP" secondAttribute="top" id="P9a-jk-FAY"/>
+                            <constraint firstItem="b7L-FR-sHP" firstAttribute="leading" secondItem="LYR-7F-t8Q" secondAttribute="trailing" constant="70" id="ZTO-Qt-xrN"/>
+                            <constraint firstItem="LYR-7F-t8Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="dve-IX-Hd7"/>
+                            <constraint firstItem="rRj-CC-QXc" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="iOy-lh-HjK"/>
+                            <constraint firstItem="vgl-iU-Z0A" firstAttribute="top" secondItem="rRj-CC-QXc" secondAttribute="bottom" constant="32" id="pzF-3R-nHd"/>
+                            <constraint firstItem="vgl-iU-Z0A" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="q1G-th-Ooz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="counterLabel" destination="rRj-CC-QXc" id="2jI-AR-7bp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-184.05797101449278" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
